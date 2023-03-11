@@ -7,7 +7,7 @@ def setup_crates():
     # l1, l2, l3 = [], [], []
     # l = [l1, l2, l3]
 
-    with open('crates.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             if line == ' 1   2   3   4   5   6   7   8   9':
@@ -26,7 +26,7 @@ def setup_crates():
 def one():
     l = setup_crates()
 
-    with open('crates.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             if line.startswith('move'):
                 parsed = line.split(' ')
@@ -50,7 +50,7 @@ def one():
 def two():
     l = setup_crates()
 
-    with open('crates.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             if line.startswith('move'):
                 parsed = line.split(' ')

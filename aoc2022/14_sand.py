@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def prepare():
     res = []
 
-    with open('sand.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             path = [ast.literal_eval(p) for p in line.split('->')]

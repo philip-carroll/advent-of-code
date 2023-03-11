@@ -6,7 +6,7 @@ from aoc2022.utils.search_utils import bfs_shortest_path
 def prepare(p=True, t=True):
     graph = defaultdict(dict)
 
-    with open('valves.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 

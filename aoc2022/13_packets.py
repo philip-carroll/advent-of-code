@@ -4,7 +4,7 @@ import ast
 def prepare():
     res = []
 
-    with open('packets.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         i = 0
         left = None
         right = None
@@ -23,7 +23,7 @@ def prepare():
 def prepare2():
     res = [[[2]], [[6]]]
 
-    with open('packets.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             if line != '':

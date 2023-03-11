@@ -75,7 +75,7 @@ class Block:
 
 
 def jet_pattern():
-    with open('tetris.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         pattern = list(f.readline().rstrip())
         pattern.reverse()
         return pattern

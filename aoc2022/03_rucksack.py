@@ -57,7 +57,7 @@ priorities = {
 def one():
     score = 0
 
-    with open('rucksack.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             if len(line) % 2 != 0:
@@ -82,7 +82,7 @@ def two():
     score = 0
     idx = 0
     lines = []
-    with open('rucksack.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             print(line)

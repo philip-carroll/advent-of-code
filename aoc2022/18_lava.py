@@ -29,7 +29,7 @@ def get_cubes():
     cubes = []
     size = 0
 
-    with open('lava.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             coords = tuple(int(c) for c in line.split(','))

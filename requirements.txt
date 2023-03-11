@@ -1,2 +1,6 @@
+geopandas
 matplotlib
+more_itertools
+networkx
 numpy
+shapely

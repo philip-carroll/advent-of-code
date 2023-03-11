@@ -2,7 +2,7 @@ def one():
     trees = []
     visible = 0
 
-    with open('trees.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 
@@ -39,7 +39,7 @@ def two():
     trees = []
     max = 0
 
-    with open('trees.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 

@@ -5,7 +5,7 @@ def one():
     measure = [20, 60, 100, 140, 180, 220]
     total = 0
 
-    with open('cycle.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         instructions = defaultdict(list)
         cycle = 1
         x = 1
@@ -31,7 +31,7 @@ def one():
 def two():
     s = ''
 
-    with open('cycle.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         instructions = defaultdict(list)
         cycle = 1
         x = 1

@@ -9,7 +9,7 @@ from shapely.geometry import Polygon as SPolygon
 def prepare():
     sensors, beacons, links = [], [], []
 
-    with open('beacon.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
             line = line.replace('Sensor at ', '').replace(' closest beacon is at ', '')

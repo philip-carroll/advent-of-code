@@ -5,7 +5,7 @@ import math
 def one():
     monkeys = defaultdict(dict)
 
-    with open('advent\monkey.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         monkey = None
 
         for line in f.readlines():
@@ -54,7 +54,7 @@ def two():
     monkeys = defaultdict(dict)
     cd = 1
 
-    with open('advent\monkey.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         monkey = None
 
         for line in f.readlines():

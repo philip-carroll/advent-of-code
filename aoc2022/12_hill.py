@@ -38,7 +38,7 @@ starts = []
 def prepare_grid():
     grid = None
 
-    with open('hill.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 

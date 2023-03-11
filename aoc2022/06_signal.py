@@ -1,5 +1,5 @@
 def one():
-    with open('signal.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             for i in range(3, len(line)):
                 if line[i] not in line[i - 3:i] and \
@@ -9,7 +9,7 @@ def one():
 
 
 def two():
-    with open('signal.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             for i in range(13, len(line)):
                 if line[i] not in line[i - 13:i] and \

@@ -1,7 +1,7 @@
 def one():
     score = 0
 
-    with open('cleanup.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 
@@ -22,7 +22,7 @@ def one():
 def two():
     score = 0
 
-    with open('cleanup.txt') as f:
+    with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
             line = line.rstrip()
 

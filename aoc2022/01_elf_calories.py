@@ -1,4 +1,4 @@
-with open('elf_calories.txt') as f:
+with open(__file__.replace('.py', '.txt')) as f:
     max = 0
     running = 0
     for line in f.readlines():
