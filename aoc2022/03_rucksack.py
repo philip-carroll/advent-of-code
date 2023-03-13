@@ -54,55 +54,56 @@ priorities = {
 }
 
 
-def one():
-    score = 0
+def get_contents():
+    contents = []
 
     with open(__file__.replace('.py', '.txt')) as f:
         for line in f.readlines():
-            line = line.rstrip()
-            if len(line) % 2 != 0:
-                print(line)
+            contents.append(line.rstrip())
 
-            half = int(len(line) / 2)
-            r1 = line[0:half]
-            r2 = line[half:len(line)]
-
-            print('%s : %s' % (r1, r2))
-            for c in r1:
-                if c in r2:
-                    p = priorities[c]
-                    score += p
-                    print('%s : %s' % (c, p))
-                    break
-
-        print(score)
+    return contents
 
 
-def two():
+def one(contents):
+    score = 0
+
+    for c in contents:
+        half = int(len(c) / 2)
+        r1 = c[0:half]
+        r2 = c[half:len(c)]
+
+        for r in r1:
+            if r in r2:
+                p = priorities[r]
+                score += p
+                break
+
+    return score
+
+
+def two(contents):
     score = 0
     idx = 0
     lines = []
-    with open(__file__.replace('.py', '.txt')) as f:
-        for line in f.readlines():
-            line = line.rstrip()
-            print(line)
-            idx += 1
-            lines.append(line)
 
-            if idx == 3:
-                for c in lines[0]:
-                    if c in lines[1] and c in lines[2]:
-                        p = priorities[c]
-                        score += p
-                        print('%s : %s' % (c, p))
-                        break
+    for c in contents:
+        idx += 1
+        lines.append(c)
 
-                idx = 0
-                lines = []
+        if idx == 3:
+            for r in lines[0]:
+                if r in lines[1] and r in lines[2]:
+                    score += priorities[r]
+                    break
 
-        print(score)
+            idx = 0
+            lines = []
+
+    return score
 
 
 if __name__ == '__main__':
-    # one()
-    two()
+    contents = get_contents()
+
+    print(one(contents))
+    print(two(contents))
