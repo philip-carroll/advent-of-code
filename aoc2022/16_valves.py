@@ -1,6 +1,6 @@
 import ast
 from collections import defaultdict
-from aoc2022.utils.search_utils import bfs_shortest_path
+from utils.search_utils import bfs_shortest_path
 
 
 def prepare(p=True, t=True):
